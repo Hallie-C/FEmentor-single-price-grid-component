@@ -29,22 +29,23 @@ body {
 
 /****************************** GRID COMPONENT DESIGN ******************************/
 .container {
-    height: max(95vh, 650px);
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .grid-component {
+    margin: 2rem 0;
     width: min(620px, 85%);
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 40px -1px rgb(25 102 101 / .2);
+    box-shadow: 0 15px 40px 0 rgb(25 102 101 / .2);
 }
 
 .grid-component > * {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
 }
 
 /* intro section design */
@@ -55,22 +56,69 @@ body {
 
 .intro h4 {
     color: var(--clr-primary-yellow);
+    margin-bottom: 1rem;
 }
 
 .intro .content {
-    margin: 1rem 0;
     color: var(--clr-neutral-blue);
-    line-height: 1.4;
+    line-height: 1.8;
 }
 
-.grid-component > .price {
+/* sub-section general design */
+.sub-section {
+    color: var(--clr-neutral-gray);
+}
+.sub-section h3 {
+    margin-bottom: 1.2rem;
+    color: var(--clr-neutral-gray);
+}
+
+/* subscription section design */
+.grid-component > .subscription {
     background-color: var(--clr-primary-cyan);
 }
 
+.subscription .price {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    margin-right: 12px;
+}
+
+.subscription .period {
+    color: #4ddad7;
+    vertical-align: super;
+}
+
+.subscription .content {
+    margin-top: 0.5rem;
+    font-size: 15px;
+}
+
+.subscription button {
+    margin-top: 2rem;
+    width: 100%;
+    height: 2.8rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--clr-primary-yellow);
+    font-weight: var(--fw-bold);
+    font-size: 0.9rem;
+    box-shadow: 0 10px 20px 2px rgb(25 102 101 / .3);
+}
+
+/* info section design */
 .grid-component > .info {
     /* background-color: #49BEBD; */
     background-color: var(--clr-primary-cyan);
     opacity: 0.8;
+}
+
+.info ul {
+    font-size: 14px;
+    list-style: none;
+    line-height: 1.5;
+    color: #c0faf9;
 }
 
 /****************************** FOOTER ******************************/
@@ -78,11 +126,21 @@ body {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 /****************************** MEDIA QUERIES ******************************/
+/* For laptop screen */
 @media only screen and (min-width: 650px) {
+    .container {
+        height: max(95vh, 550px);
+    }
+    
     .grid-component {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .grid-component > * {
+        padding: 2.5rem;
+    }
+
     .grid-component > .intro {
         grid-column: span 2;
     }

@@ -29,17 +29,15 @@ body {
 
 /****************************** GRID COMPONENT DESIGN ******************************/
 .container {
-    height: max(95vh, 480px);
+    height: max(95vh, 650px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .grid-component {
-    width: min(620px, 90%);
+    width: min(620px, 85%);
     background-color: white;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 40px -1px rgb(25 102 101 / .2);
@@ -50,10 +48,6 @@ body {
 }
 
 /* intro section design */
-.grid-component > .intro {
-    grid-column: span 2;
-}
-
 .intro h2 {
     margin-bottom: 1.2rem;
     color: var(--clr-primary-cyan);
@@ -82,3 +76,14 @@ body {
 /****************************** FOOTER ******************************/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/****************************** MEDIA QUERIES ******************************/
+@media only screen and (min-width: 650px) {
+    .grid-component {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-component > .intro {
+        grid-column: span 2;
+    }
+}

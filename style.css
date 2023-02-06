@@ -28,7 +28,7 @@ body {
 }
 
 /****************************** GRID COMPONENT DESIGN ******************************/
-.container {
+main {
     height: auto;
     display: flex;
     justify-content: center;
@@ -49,17 +49,20 @@ body {
 }
 
 /* intro section design */
-.intro h2 {
+.intro h1 {
+    font-size: 1.3rem;
     margin-bottom: 1.2rem;
     color: var(--clr-primary-cyan);
 }
 
-.intro h4 {
+.intro h2 {
+    font-size: 1.1rem;
     color: var(--clr-primary-yellow);
     margin-bottom: 1rem;
 }
 
 .intro .content {
+    font-size: 14px;
     color: var(--clr-neutral-blue);
     line-height: 1.8;
 }
@@ -128,7 +131,7 @@ body {
 /****************************** MEDIA QUERIES ******************************/
 /* For laptop screen */
 @media only screen and (min-width: 650px) {
-    .container {
+    main {
         height: max(95vh, 550px);
     }
     
@@ -143,5 +146,15 @@ body {
 
     .grid-component > .intro {
         grid-column: span 2;
+    }
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+    
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+    .intro .content {
+        font-size: var(--fs-primary);
     }
 }

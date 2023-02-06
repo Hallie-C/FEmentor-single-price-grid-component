@@ -40,18 +40,33 @@ body {
     background-color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 40px -1px rgb(25 102 101 / .2);
-    /* box-shadow: -5px 15px 50px -1px lightblue; */
 }
 
 .grid-component > * {
     padding: 2rem;
 }
 
+/* intro section design */
 .grid-component > .intro {
     grid-column: span 2;
+}
+
+.intro h2 {
+    margin-bottom: 1.2rem;
+    color: var(--clr-primary-cyan);
+}
+
+.intro h4 {
+    color: var(--clr-primary-yellow);
+}
+
+.intro .content {
+    margin: 1rem 0;
+    color: var(--clr-neutral-blue);
+    line-height: 1.4;
 }
 
 .grid-component > .price {
@@ -59,7 +74,9 @@ body {
 }
 
 .grid-component > .info {
-    background-color: #49BEBD;
+    /* background-color: #49BEBD; */
+    background-color: var(--clr-primary-cyan);
+    opacity: 0.8;
 }
 
 /****************************** FOOTER ******************************/
